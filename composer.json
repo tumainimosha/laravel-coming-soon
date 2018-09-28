@@ -24,5 +24,12 @@
         "psr-4": {
             "snw\\ComingSoon\\": "src/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "snw\\ComingSoon\\ComingSoonServiceProvider"
+            ]
+        }
     }
 }
