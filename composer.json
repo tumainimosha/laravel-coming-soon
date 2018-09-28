@@ -22,7 +22,7 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "softnweb\\laravel-coming-soon\\": "src/"
+            "snw\\ComingSoon\\": "src/"
         }
     }
 }
