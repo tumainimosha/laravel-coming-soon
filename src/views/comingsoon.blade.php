@@ -31,8 +31,6 @@
                 <ul class="links">
                     <li><a href="{{$value['snw_facebook']}}">Facebook</a></li>
                     <li><a href="{{$value['snw_twitter']}}">twitter</a></li>
-                    <li><a href="{{$value['snw_instagram']}}">instagram</a></li>
-                    <li><a href="{{$value['snw_github']}}">github</a></li>
                     <li><a href="mailto:{{$value['snw_mail']}}">mail</a></li>
 </ul>
             </div>
