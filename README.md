@@ -9,17 +9,23 @@ Just Install the package, configure .env and you are ready to go!
 
 
 ## Installation
+
+1. Install using composer
+
+```bash
 composer require tumainimosha/laravel-coming-soon
+```
 
 
+2. After Installation run this command to publish assets
 
-## After Installation run this command to publish assets
+```bash
 php artisan vendor:publish --provider="snw\\ComingSoon\\ComingSoonServiceProvider" --tag="assets"
+```
 
+3. Add Coming Soon route to your route file
 
-## Add Coming Soon route to your route file
-
-### 1. As the home route. Users will see this as landing page for `yourdomain.com`.
+### Option (a) As the home route. Users will see this as landing page for `yourdomain.com`.
 ```php
 // file: routes/web.php
 
@@ -28,7 +34,8 @@ Route::get('/', function () {
 });
 ```
 
-### 2. As default route. Users will see this when trying to access any URL on your site
+### Option (b). As default route. Users will see this when trying to access any URL on your site
+
 ```php
 // file: routes/web.php
 
@@ -38,10 +45,11 @@ Route::any('{query}', function () {
 ```
 
 ## If you want to display the Email form
+
 Publish the migrations
 
 ```bash
-php artisan vendor:publish --provider="snw\\ComingSoon\\ComingSoonServiceProvider" --tag="assets"
+php artisan vendor:publish --provider="snw\\ComingSoon\\ComingSoonServiceProvider" --tag="migrations"
 ```
 
 Then run 
@@ -53,7 +61,7 @@ php artisan migrate
 This will create a `coming_soons` table containing list of email of visitors to the site
 
 ## .env values
-You will have to add the following to your .env and set values accordingly
+You will have to add the following to your `.env` and set values accordingly
 
 - **OFFLINE_ENABLE=** {true/false} _(Enable Coming Soon page)_
 - **OFFLINE_SHOW_EMAIL_FORM=** {true/false} _(Display the Email form)_
