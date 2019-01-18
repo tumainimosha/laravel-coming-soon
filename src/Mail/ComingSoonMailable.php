@@ -5,12 +5,13 @@ namespace snw\ComingSoon\Mail;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Contracts\Queue\ShouldQueue;
 
 class ComingSoonMailable extends Mailable
 {
     use Queueable, SerializesModels;
+
     public $email;
+
     /**
      * Create a new message instance.
      *
@@ -18,7 +19,7 @@ class ComingSoonMailable extends Mailable
      */
     public function __construct($email)
     {
-        $this->email= $email;
+        $this->email = $email;
     }
 
     /**
@@ -29,7 +30,7 @@ class ComingSoonMailable extends Mailable
     public function build()
     {
         return $this->markdown('comingsoon::comingsoon.email')->with([
-            'email' => $this->email
+            'email' => $this->email,
         ]);
     }
 }
