@@ -10,20 +10,20 @@ Just Install the package, configure .env and you are ready to go!
 
 ## Installation
 
-1. Install using composer
+* Install using composer
 
 ```bash
 composer require tumainimosha/laravel-coming-soon
 ```
 
 
-2. After Installation run this command to publish assets
+* After Installation run this command to publish assets
 
 ```bash
 php artisan vendor:publish --provider="snw\\ComingSoon\\ComingSoonServiceProvider" --tag="assets"
 ```
 
-3. Add Coming Soon route to your route file
+* Add Coming Soon route to your route file
 
 ### Option (a) As the home route. Users will see this as landing page for `yourdomain.com`.
 ```php
@@ -76,3 +76,17 @@ You will have to add the following to your `.env` and set values accordingly
 - **OFFLINE_INSTAGRAM=** {#}
 - **OFFLINE_GITHUB=** {#}
 - **OFFLINE_MAIL=** {info@softnweb.in}
+
+## Security
+
+If you discover any security related issues, please email [Me](mailto:princeton.mosha@gmail.com?subject=Coming+Soon+Package+Security+Issue)
+instead of using the issue tracker.
+
+
+## Credits
+
+- [Tumaini Mosha](https://github.com/tumainimosha)
+- [All contributors](https://github.com/tumainimosha/laravel-coming-soon/graphs/contributors)
+
+
+This package is forked [SoftNWeb/laravel-coming-soon](https://github.com/SoftNWeb/laravel-coming-soon) package
