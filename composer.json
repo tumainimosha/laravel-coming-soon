@@ -1,29 +1,24 @@
 {
     "name": "tumainimosha/laravel-coming-soon",
-    "description": "Simple Comming Soon page",
     "type": "library",
+    "description": "Simple Comming Soon page",
     "license": "MIT",
-    "scripts": {
-        "post-install-cmd": [
-            "php artisan vendor:publish"
-        ],
-        "post-update-cmd": [
-            "php -r \"copy('src/config/comingsoon.php', 'config/comingsoon.php');\"",
-            "php artisan vendor:publish"
-        ]
-    },
     "authors": [
         {
-            "name": "Soft 'n' Web",
-            "email": "info@softnweb.in"
+            "name": "Tumaini Mosha",
+            "email": "princeton.mosha@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
     "require": {},
-    "autoload": {
-        "psr-4": {
-            "snw\\ComingSoon\\": "src/"
-        }
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.13",
+        "orchestra/testbench": "~3.7.0",
+        "phpunit/phpunit": "^7.0"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
     },
     "extra": {
         "laravel": {
@@ -32,7 +27,12 @@
             ]
         }
     },
-    "require-dev": {
-        "friendsofphp/php-cs-fixer": "^2.15@dev"
+    "autoload": {
+        "psr-4": {
+            "snw\\ComingSoon\\": "src/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
     }
 }
