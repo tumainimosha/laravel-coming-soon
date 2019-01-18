@@ -9,19 +9,48 @@ Just Install the package, configure .env and you are ready to go!
 
 
 ## Installation
-composer require softnweb/laravel-coming-soon
+composer require tumainimosha/laravel-coming-soon
 
 
 
-## After Installation run this command to publish file
-php artisan vendor:publish
+## After Installation run this command to publish assets
+php artisan vendor:publish --provider="snw\\ComingSoon\\ComingSoonServiceProvider" --tag="assets"
 
 
+## Add Coming Soon route to your route file
+
+### 1. As the home route. Users will see this as landing page for `yourdomain.com`.
+```php
+// file: routes/web.php
+
+Route::get('/', function () {
+    return view('comingsoon::comingsoon');
+});
+```
+
+### 2. As default route. Users will see this when trying to access any URL on your site
+```php
+// file: routes/web.php
+
+Route::any('{query}', function () {
+    return view('comingsoon::comingsoon');
+})->where('query', '.*');
+```
 
 ## If you want to display the Email form
-Then run php artisan migrate
+Publish the migrations
 
+```bash
+php artisan vendor:publish --provider="snw\\ComingSoon\\ComingSoonServiceProvider" --tag="assets"
+```
 
+Then run 
+
+```bash
+php artisan migrate
+```
+
+This will create a `coming_soons` table containing list of email of visitors to the site
 
 ## .env values
 You will have to add the following to your .env and set values accordingly

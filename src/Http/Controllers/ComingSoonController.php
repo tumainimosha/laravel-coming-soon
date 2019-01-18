@@ -2,8 +2,8 @@
 
 namespace snw\ComingSoon\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Mail;
 use snw\ComingSoon\Mail\ComingSoonMailable;
 use snw\ComingSoon\Models\ComingSoon;

@@ -1,3 +1,7 @@
+<?php
+$value = config('comingsoon');
+$dt = \Carbon\Carbon::create($value['snw_year'], $value['snw_month'], $value['snw_day'], $value['snw_hours'], $value['snw_minutes'], $value['snw_seconds']);
+?>
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
     <head>
@@ -42,7 +46,7 @@
                         <li><a href="{{$value['snw_github']}}">Github</a></li>
                     @endif
                     @if (strlen($value['snw_mail']))
-                        <li><a href="mailto:{{$value['snw_mail']}}">Email</a></li>
+                        <li><a href="mailto:{{$value['snw_mail']}}">Email Us</a></li>
                     @endif
                 </ul>
             </div>
