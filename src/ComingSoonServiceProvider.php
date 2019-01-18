@@ -10,7 +10,7 @@ class ComingSoonServiceProvider extends ServiceProvider
     {
         // publish views
          $this->publishes([
-             __DIR__.'/views' => base_path('resources/views/comingsoon'),
+             __DIR__.'/views' => base_path('resources/views/vendor/comingsoon'),
          ], 'views');
 
         $this->loadViewsFrom(__DIR__ . '/views', 'comingsoon');
