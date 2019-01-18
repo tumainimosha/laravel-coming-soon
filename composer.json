@@ -1,5 +1,5 @@
 {
-    "name": "angelkurten/laravel-coming-soon",
+    "name": "tumainimosha/laravel-coming-soon",
     "description": "Simple Comming Soon page",
     "type": "library",
     "license": "MIT",
@@ -31,5 +31,8 @@
                 "snw\\ComingSoon\\ComingSoonServiceProvider"
             ]
         }
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.15@dev"
     }
 }
